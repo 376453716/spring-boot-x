@@ -1,0 +1,16 @@
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/SentenceExtractor.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/Hints.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/ConfigurationMetadataRepositoryJsonBuilder.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/ValueProvider.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/ConfigurationMetadataRepository.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/package-info.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/ValueHint.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/ConfigurationMetadataSource.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/ConfigurationMetadataItem.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/JsonReader.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/ConfigurationMetadataHint.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/Deprecation.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/RawConfigurationMetadata.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/ConfigurationMetadataProperty.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/SimpleConfigurationMetadataRepository.java
+/Users/xionghao/github/xionghao/spring-boot-x/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/src/main/java/org/springframework/boot/configurationmetadata/ConfigurationMetadataGroup.java

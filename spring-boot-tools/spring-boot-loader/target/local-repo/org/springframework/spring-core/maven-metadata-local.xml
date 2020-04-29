@@ -1,0 +1,10 @@
+<metadata>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-core</artifactId>
+  <versioning>
+    <versions>
+      <version>5.2.5.RELEASE</version>
+    </versions>
+    <lastUpdated>20200429062005</lastUpdated>
+  </versioning>
+</metadata>
