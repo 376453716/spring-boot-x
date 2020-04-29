@@ -84,6 +84,15 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.context.support.StandardServletEnvironment;
 
 /**
+ * 用于从main方法启动和运行spring应用，默认情况下，类将执行下面的步骤来启动应用
+ *
+ * <ul>
+ *  * <li>创建一个适当的 {@link ApplicationContext} 实例 (取决于classpath)</li>
+ *  * <li>注册一个 {@link CommandLinePropertySource} 将命令行参数转换到spring的属性</li>
+ *  * <li>Refresh the application context, loading all singleton beans</li>
+ *  * <li>Trigger any {@link CommandLineRunner} beans</li>
+ *  * </ul>
+ *
  * Class that can be used to bootstrap and launch a Spring application from a Java main
  * method. By default class will perform the following steps to bootstrap your
  * application:
@@ -1205,6 +1214,7 @@ public class SpringApplication {
 	}
 
 	/**
+	 * 使用默认配置从加载来源运行spring应用
 	 * Static helper that can be used to run a {@link SpringApplication} from the
 	 * specified source using default settings.
 	 * @param primarySource the primary source to load
@@ -1212,6 +1222,7 @@ public class SpringApplication {
 	 * @return the running {@link ApplicationContext}
 	 */
 	public static ConfigurableApplicationContext run(Class<?> primarySource, String... args) {
+		logger.info("test run...");
 		return run(new Class<?>[] { primarySource }, args);
 	}
 
