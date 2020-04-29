@@ -87,12 +87,38 @@ import org.springframework.web.context.support.StandardServletEnvironment;
  * 用于从main方法启动和运行spring应用，默认情况下，类将执行下面的步骤来启动应用
  *
  * <ul>
- *  * <li>创建一个适当的 {@link ApplicationContext} 实例 (取决于classpath)</li>
- *  * <li>注册一个 {@link CommandLinePropertySource} 将命令行参数转换到spring的属性</li>
- *  * <li>Refresh the application context, loading all singleton beans</li>
- *  * <li>Trigger any {@link CommandLineRunner} beans</li>
- *  * </ul>
+ *  <li>创建一个适当的 {@link ApplicationContext} 实例 (取决于classpath)</li>
+ *  <li>注册一个 {@link CommandLinePropertySource} 将命令行参数转换到spring的属性</li>
+ *  <li>刷新应用上下文，加载所有单例beans</li>
+ *  <li>触发任意{@link CommandLineRunner} beans</li>
+ *  </ul>
  *
+ *  在大多数情况下，可以直接从静态main方法调用{@link #run(Class, String[])}启动应用
+ *
+ *  对于更多的高级配置，可以在run之前创建{@link SpringApplication}并进行自定义配置
+ *   For more advanced configuration a {@link SpringApplication} instance can be created and
+ *  customized before being run:
+ *  <pre class="code">
+ *  public static void main(String[] args) {
+ *    SpringApplication application = new SpringApplication(MyApplication.class);
+ *    // ... customize application settings here
+ *    application.run(args)
+ *  }
+ *  </pre>
+ *	{@link SpringApplication}可以从多种不同的source读取bean，通常建议使用单个{@code @Configuration}类用于启动应用，
+ * 	然而，也可以从一下位置设置{@link #getSources() source来源}
+ * 	<ul>
+ *   <li>{@link AnnotatedBeanDefinitionReader}加载的完全限定类名
+ *   </li>
+ *   <li>{@link XmlBeanDefinitionReader}加载的xml资源, 或者{@link GroovyBeanDefinitionReader}加载的groovy脚本
+ *   </li>
+ *   <li>{@link ClassPathBeanDefinitionScanner}要扫描的包名</li>
+ *   </ul>
+ *
+ *  配置属性也绑定到{@link SpringApplication}。这使得可以动态设置{@link SpringApplication}的属性。
+ *  像关闭banner开关("spring.main.banner-mode=off")，或者是否是web环境("spring.main.web-application-type=none")
+ *  或者其他来源("spring.main.sources" - a CSV list)
+ * ----------------------
  * Class that can be used to bootstrap and launch a Spring application from a Java main
  * method. By default class will perform the following steps to bootstrap your
  * application:
