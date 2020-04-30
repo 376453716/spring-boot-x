@@ -84,6 +84,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.context.support.StandardServletEnvironment;
 
 /**
+ * spring应用
  * 用于从main方法启动和运行spring应用，默认情况下，类将执行下面的步骤来启动应用
  *
  * <ul>
@@ -196,6 +197,7 @@ import org.springframework.web.context.support.StandardServletEnvironment;
 public class SpringApplication {
 
 	/**
+	 * 没有web环境时的默认的应用上下文类名：AnnotationConfigApplicationContext
 	 * The class name of application context that will be used by default for non-web
 	 * environments.
 	 */
@@ -203,6 +205,7 @@ public class SpringApplication {
 			+ "annotation.AnnotationConfigApplicationContext";
 
 	/**
+	 * web环境的默认应用上下文：AnnotationConfigServletWebServerApplicationContext
 	 * The class name of application context that will be used by default for web
 	 * environments.
 	 */
@@ -210,6 +213,7 @@ public class SpringApplication {
 			+ "web.servlet.context.AnnotationConfigServletWebServerApplicationContext";
 
 	/**
+	 * reactiveweb环境的默认应用上下文：AnnotationConfigReactiveWebServerApplicationContext
 	 * The class name of application context that will be used by default for reactive web
 	 * environments.
 	 */
@@ -217,11 +221,13 @@ public class SpringApplication {
 			+ "boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext";
 
 	/**
+	 * 默认的banner位置
 	 * Default banner location.
 	 */
 	public static final String BANNER_LOCATION_PROPERTY_VALUE = SpringApplicationBannerPrinter.DEFAULT_BANNER_LOCATION;
 
 	/**
+	 * banner配置key
 	 * Banner location property key.
 	 */
 	public static final String BANNER_LOCATION_PROPERTY = SpringApplicationBannerPrinter.BANNER_LOCATION_PROPERTY;
@@ -275,6 +281,7 @@ public class SpringApplication {
 	private boolean lazyInitialization = false;
 
 	/**
+	 * 创建应用，从指定source加载bean，可在run之前自定义实例
 	 * Create a new {@link SpringApplication} instance. The application context will load
 	 * beans from the specified primary sources (see {@link SpringApplication class-level}
 	 * documentation for details. The instance can be customized before calling
@@ -325,12 +332,14 @@ public class SpringApplication {
 	}
 
 	/**
+	 * 运行应用，创建和刷新一个新的spring容器上下文：ApplicationContext
 	 * Run the Spring application, creating and refreshing a new
 	 * {@link ApplicationContext}.
 	 * @param args the application arguments (usually passed from a Java main method)
 	 * @return a running {@link ApplicationContext}
 	 */
 	public ConfigurableApplicationContext run(String... args) {
+		//计时器
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start();
 		ConfigurableApplicationContext context = null;

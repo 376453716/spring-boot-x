@@ -21,6 +21,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 
 /**
+ * 用于支持自定义报告应用启动异常的回调接口。
+ * {@link SpringBootExceptionReporter reports}是通过 {@link SpringFactoriesLoader}加载的，
+ * 并且必须使用单个{@link ConfigurableApplicationContext}参数声明一个公共构造函数。
+ * <p>
  * Callback interface used to support custom reporting of {@link SpringApplication}
  * startup errors. {@link SpringBootExceptionReporter reporters} are loaded via the
  * {@link SpringFactoriesLoader} and must declare a public constructor with a single
@@ -34,6 +38,7 @@ import org.springframework.core.io.support.SpringFactoriesLoader;
 public interface SpringBootExceptionReporter {
 
 	/**
+	 * 向用户报告启动失败
 	 * Report a startup failure to the user.
 	 * @param failure the source failure
 	 * @return {@code true} if the failure was reported or {@code false} if default
