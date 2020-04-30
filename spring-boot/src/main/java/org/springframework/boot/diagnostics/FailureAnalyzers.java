@@ -36,6 +36,8 @@ import org.springframework.util.ClassUtils;
 import org.springframework.util.ReflectionUtils;
 
 /**
+ * 工具类用于触发从{@code spring.factories}加载{@link FailureAnalyzer} and {@link FailureAnalysisReporter}实例
+ * <p/>
  * Utility to trigger {@link FailureAnalyzer} and {@link FailureAnalysisReporter}
  * instances loaded from {@code spring.factories}.
  * <p>
